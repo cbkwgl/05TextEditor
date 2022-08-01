@@ -1,0 +1,21 @@
+﻿<Window x:Class="_05TextEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_05TextEditor"
+        mc:Ignorable="d"
+        Title="Text Editor" Height="450" Width="800">
+    <Grid Height="420" Width="800">
+        <Menu VerticalAlignment="Top" Height="25" HorizontalAlignment="Left" Width="Auto" >
+            <MenuItem Header="File" FontSize="16">
+                <MenuItem Name="newFile" Header="New" FontSize="16" Click="newFile_Click"/>
+                <MenuItem Name="openFile" Header="Open" FontSize="16" Click="openFile_Click"/>
+                <MenuItem Name="saveFile" Header="Save" FontSize="16" Click="saveFile_Click"/>
+                <Separator/>
+                <MenuItem Name="closeFile" Header="Close" FontSize="16" Click="closeFile_Click"/>
+            </MenuItem>
+        </Menu>
+        <RichTextBox Name="txtBox" SpellCheck.IsEnabled="True" Margin="0,30,0,0" Block.LineHeight="2"/>
+    </Grid>
+</Window>
